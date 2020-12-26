@@ -70,14 +70,13 @@ meanAdjusted = pca.analyze(3)
 w = meanAdjusted[0]
 x = meanAdjusted[1]
 y = meanAdjusted[2]
-y = iris.target
-#z = meanAdjusted[3]
+labs = iris.target
 ax = plt.axes()
-
-plt.scatter(w, x, c=y)
+#""" uncomment for 3d
+plt.scatter(w, x, c=labs)
 """
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
-ax.scatter(w, x, y)
+ax.scatter(w, x, y, c=labs)
 #"""
 plt.show()
